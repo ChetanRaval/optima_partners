@@ -1,0 +1,149 @@
+[
+  {
+    "Race Name": "Australian Grand Prix",
+    "Race Round": 1,
+    "Race Datetime": "2018-03-25T00:00:00.000",
+    "Race Winning driverId": 20,
+    "Race Fastest Lap": "01:26.5"
+  },
+  {
+    "Race Name": "Bahrain Grand Prix",
+    "Race Round": 2,
+    "Race Datetime": "2018-04-08T00:00:00.000",
+    "Race Winning driverId": 20,
+    "Race Fastest Lap": "01:34.5"
+  },
+  {
+    "Race Name": "Chinese Grand Prix",
+    "Race Round": 3,
+    "Race Datetime": "2018-04-15T00:00:00.000",
+    "Race Winning driverId": 817,
+    "Race Fastest Lap": "01:35.8"
+  },
+  {
+    "Race Name": "Azerbaijan Grand Prix",
+    "Race Round": 4,
+    "Race Datetime": "2018-04-29T00:00:00.000",
+    "Race Winning driverId": 1,
+    "Race Fastest Lap": "01:45.4"
+  },
+  {
+    "Race Name": "Spanish Grand Prix",
+    "Race Round": 5,
+    "Race Datetime": "2018-05-13T00:00:00.000",
+    "Race Winning driverId": 1,
+    "Race Fastest Lap": "01:19.1"
+  },
+  {
+    "Race Name": "Monaco Grand Prix",
+    "Race Round": 6,
+    "Race Datetime": "2018-05-27T00:00:00.000",
+    "Race Winning driverId": 817,
+    "Race Fastest Lap": "01:15.6"
+  },
+  {
+    "Race Name": "Canadian Grand Prix",
+    "Race Round": 7,
+    "Race Datetime": "2018-06-10T18:10:00.000",
+    "Race Winning driverId": 20,
+    "Race Fastest Lap": "01:14.0"
+  },
+  {
+    "Race Name": "French Grand Prix",
+    "Race Round": 8,
+    "Race Datetime": "2018-06-24T14:10:00.000",
+    "Race Winning driverId": 1,
+    "Race Fastest Lap": "01:34.5"
+  },
+  {
+    "Race Name": "Austrian Grand Prix",
+    "Race Round": 9,
+    "Race Datetime": "2018-07-01T13:10:00.000",
+    "Race Winning driverId": 830,
+    "Race Fastest Lap": "01:07.4"
+  },
+  {
+    "Race Name": "British Grand Prix",
+    "Race Round": 10,
+    "Race Datetime": "2018-07-08T13:10:00.000",
+    "Race Winning driverId": 20,
+    "Race Fastest Lap": "01:30.7"
+  },
+  {
+    "Race Name": "German Grand Prix",
+    "Race Round": 11,
+    "Race Datetime": "2018-07-22T13:10:00.000",
+    "Race Winning driverId": 1,
+    "Race Fastest Lap": "01:15.5"
+  },
+  {
+    "Race Name": "Hungarian Grand Prix",
+    "Race Round": 12,
+    "Race Datetime": "2018-07-29T13:10:00.000",
+    "Race Winning driverId": 1,
+    "Race Fastest Lap": "01:21.1"
+  },
+  {
+    "Race Name": "Belgian Grand Prix",
+    "Race Round": 13,
+    "Race Datetime": "2018-08-26T13:10:00.000",
+    "Race Winning driverId": 20,
+    "Race Fastest Lap": "01:46.6"
+  },
+  {
+    "Race Name": "Italian Grand Prix",
+    "Race Round": 14,
+    "Race Datetime": "2018-09-02T13:10:00.000",
+    "Race Winning driverId": 1,
+    "Race Fastest Lap": "01:22.5"
+  },
+  {
+    "Race Name": "Singapore Grand Prix",
+    "Race Round": 15,
+    "Race Datetime": "2018-09-16T12:10:00.000",
+    "Race Winning driverId": 1,
+    "Race Fastest Lap": "01:42.9"
+  },
+  {
+    "Race Name": "Russian Grand Prix",
+    "Race Round": 16,
+    "Race Datetime": "2018-09-30T11:10:00.000",
+    "Race Winning driverId": 1,
+    "Race Fastest Lap": "01:35.9"
+  },
+  {
+    "Race Name": "Japanese Grand Prix",
+    "Race Round": 17,
+    "Race Datetime": "2018-10-07T05:10:00.000",
+    "Race Winning driverId": 1,
+    "Race Fastest Lap": "01:32.8"
+  },
+  {
+    "Race Name": "United States Grand Prix",
+    "Race Round": 18,
+    "Race Datetime": "2018-10-21T18:10:00.000",
+    "Race Winning driverId": 8,
+    "Race Fastest Lap": "01:38.5"
+  },
+  {
+    "Race Name": "Mexican Grand Prix",
+    "Race Round": 19,
+    "Race Datetime": "2018-10-28T19:10:00.000",
+    "Race Winning driverId": 830,
+    "Race Fastest Lap": "01:19.2"
+  },
+  {
+    "Race Name": "Brazilian Grand Prix",
+    "Race Round": 20,
+    "Race Datetime": "2018-11-11T17:10:00.000",
+    "Race Winning driverId": 1,
+    "Race Fastest Lap": "01:11.8"
+  },
+  {
+    "Race Name": "Abu Dhabi Grand Prix",
+    "Race Round": 21,
+    "Race Datetime": "2018-11-25T13:10:00.000",
+    "Race Winning driverId": 1,
+    "Race Fastest Lap": "01:41.4"
+  }
+]
