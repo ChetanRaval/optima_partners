@@ -34,14 +34,52 @@ def _read_csv(path: Path, expected_columns: list[str]) -> pd.DataFrame:
     # function returns the DataFrame
     return df
 
+
+def _normalise_numeric(df: pd.DataFrame, numeric_columns: list[str]) -> pd.DataFrame:
+    """
+    Strip stray whitespace and coerce the given columns to numbers in place.
+
+    e.g. a leading space (" 123") would make the raceId join match nothing, and a non-numeric position
+    ("DNF") would break the winner comparison where position == 1. 
+    
+    Stripping then coercing turns the first into a real number and the second into NaN (null) so neither corrupts
+    the output. 
+    """
+    for col in numeric_columns:
+        # astype("string") first so .str.strip() works whether the column was
+        # read as numbers or as object/strings; strip removes stray whitespace
+        cleaned = df[col].astype("string").str.strip()
+        df[col] = pd.to_numeric(cleaned, errors="coerce")
+    return df
+
+
+def _validate_lap_format(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Fail if any non-null fastestLapTime is not in MM:SS.s format
+
+    """
+    col = config.FASTEST_LAP_COLUMN
+    values = df[col].dropna().astype("string").str.strip()
+    bad = values[~values.str.match(config.FASTEST_LAP_PATTERN)]
+    if not bad.empty:
+        sample = bad.unique()[:5].tolist()
+        raise ValueError(
+            f"{col} has {len(bad)} value(s) not in MM:SS.s format, e.g. {sample}. "
+            f"Expected values like '01:29.4'."
+        )
+    return df
+
 # Load races.csv and convert to DataFrame
 # Called in main.py
 # Takes filepath from `config.py` and returns the path along with column names
 def load_races(path: Path = config.RACES_CSV) -> pd.DataFrame:
-    return _read_csv(path, config.RACES_COLUMNS)
+    df = _read_csv(path, config.RACES_COLUMNS)
+    return _normalise_numeric(df, config.RACES_NUMERIC_COLUMNS)
 
 # Load results.csv and convert to DataFrame
 # Called in main.py
 # Takes filepath from `config.py` and returns the path along with column names
 def load_results(path: Path = config.RESULTS_CSV) -> pd.DataFrame:
-    return _read_csv(path, config.RESULTS_COLUMNS)
+    df = _read_csv(path, config.RESULTS_COLUMNS)
+    df = _normalise_numeric(df, config.RESULTS_NUMERIC_COLUMNS)
+    return _validate_lap_format(df)

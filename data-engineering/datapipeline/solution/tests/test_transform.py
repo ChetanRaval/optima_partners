@@ -15,7 +15,6 @@ Test Transform step at pipeline.transform.py
 
 import numpy as np
 import pandas as pd
-
 from pipeline import config, transform
 
 def _races():

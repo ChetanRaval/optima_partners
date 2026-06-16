@@ -19,6 +19,18 @@ RESULTS_DIR = PROJECT_ROOT / "results"
 RACES_COLUMNS = ["raceId", "year", "round", "name", "date", "time"]
 RESULTS_COLUMNS = ["resultId", "raceId", "driverId", "position", "fastestLapTime"]
 
+# Columns that must be whole numbers. On extract these are stripped of stray
+# whitespace and coerced to numbers so that the raceId join key lines up even
+# if a value arrives as " 123", and non-numeric values like a "DNF" position
+# become null rather than breaking the winner comparison or the join.
+RACES_NUMERIC_COLUMNS = ["raceId", "year", "round"]
+RESULTS_NUMERIC_COLUMNS = ["resultId", "raceId", "driverId", "position"]
+
+# fastestLapTime must look like MM:SS.s (e.g. "01:29.4") as per the example provided. 
+#V alidated in extract so that a value in the wrong unit/format (e.g. seconds "92.4") fails
+FASTEST_LAP_COLUMN = "fastestLapTime"
+FASTEST_LAP_PATTERN = r"^\d{1,2}:\d{2}\.\d$"
+
 # JSON output field names
 RACE_NAME = "Race Name"
 RACE_ROUND = "Race Round"

@@ -86,7 +86,7 @@ def _to_record(row: pd.Series) -> dict:
 # Called in main.py
 def build_stats_by_year(races: pd.DataFrame, results: pd.DataFrame) -> dict[int, list[dict]]:
     """
-    Join races with their winners and group records by year, sorted by round.
+    Join races with their winners and group records by year, sorted by round. Also ensure that 
 
     Races with no results are kept with a null winner and fastest lap.
     This decision has been documented in README
@@ -103,7 +103,6 @@ def build_stats_by_year(races: pd.DataFrame, results: pd.DataFrame) -> dict[int,
     winners = build_winners(results)
     # Left join races dataframe onto winners dataframe so that every race is kept even if it has no matching winner (handled with null)
     merged = races.merge(winners, on="raceId", how="left")
-
     # define empty dictionary and make sure keys are ints and values are lists of dicts
     stats: dict[int, list[dict]] = {}
     # Group the merged rows by year, return key (year) and that year's races
