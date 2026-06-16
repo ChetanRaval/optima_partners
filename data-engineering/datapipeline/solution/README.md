@@ -1,5 +1,4 @@
 # Solution README
-Add your solution documentation here
 
 # Folder Structure
 The pipeline reads from `source-data/` and writes to `results/`, both of which live at the `datapipeline/` project root. 
